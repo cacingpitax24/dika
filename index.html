@@ -15,7 +15,7 @@
         <!-- Section 1: Profile -->
         <div class="section-1">
             <h2>Satria Andikah Putra</h2>
-            <img src="c:\Users\USER\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\0668E20B3C9E9185B04B3D2A9DC8FA2D\WhatsApp Image 2024-10-20 at 11.43.32_902bc9a0.jpg" 
+            <img src="foto dika.jpg" 
                  alt="Profile Picture" width="30%" height="40%">
             <p>Depok, Indonesia</p>
             <!-- Social Links -->
@@ -48,9 +48,89 @@
                 <li><a href="assets/logins/index.html" target="_blank">Form Login</a></li>
                 <li><a href="assets/dasbord/index.html" target="_blank">Dashboard</a></li>
                 <li><a href="assets/kalkulators/index.html" target="_blank">Calculator</a></li>
-                <li><a href="#">Mini Game</a></li>
-                <li><a href="#">Sertifikat</a></li>
             </ul>
+
+            <!-- Style untuk modal -->
+            <style>
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+
+                .modal-content {
+                    background-color: white;
+                    margin: 15% auto;
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%;
+                    max-width: 500px;
+                }
+
+                .close {
+                    color: #aaa;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+
+                .close:hover,
+                .close:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            </style>
+
+            <h2>My Certificates</h2>
+            <ul>
+                <li><a href="#" id="sertifikatLink">Sertifikat HTML</a></li>
+                <li><a href="#" id="sertifikatLink2">Sertifikat CSS</a></li>
+                <li><a href="#" id="sertifikatLink3">Sertifikat JavaScript</a></li>
+            </ul>
+
+            <!-- Modal untuk gambar sertifikat -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="C:\Users\USER\Documents\PEMOGRAMAN WEB\PORTOFOLIO\assets\html.jpg" alt="Sertifikat">
+                </div>
+            </div>
+
+            <script>
+                // Mendapatkan elemen modal dan link
+                var modal = document.getElementById("myModal");
+                var link = document.getElementById("sertifikatLink");
+                var span = document.getElementsByClassName("close")[0];
+
+                // Ketika link sertifikat ditekan, buka modal
+                link.onclick = function(event) {
+                    event.preventDefault(); // Mencegah link default
+                    modal.style.display = "block";
+                }
+
+                // Ketika tombol 'X' ditekan, tutup modal
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+                // Ketika pengguna klik di luar modal, tutup modal
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
 
             <h2>Contact</h2>
             <p>Email: satriaandikahputra@gmail.com</p>
